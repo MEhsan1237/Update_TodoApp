@@ -63,14 +63,6 @@ A premium, high-performance Todo application designed with **Material 3** princi
 
 ---
 
-## 📸 Screen Previews
-
-| Dashboard | Task List | Dark Mode |
-| :---: | :---: | :---: |
-| _[Add Screenshot]_ | _[Add Screenshot]_ | _[Add Screenshot]_ |
-
----
-
 ## 📜 License
 
 Distributed under the MIT License. See `LICENSE` for more information.
@@ -89,4 +81,4 @@ Contributions are what make the open source community such an amazing place to l
 
 ---
 
-Developed with ❤️ by [Your Name]
+Developed with ❤️ by Muhammad Ehsan

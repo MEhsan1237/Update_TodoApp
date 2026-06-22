@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../main_screen/boxes_file.dart';
 import '../notes_model/notes_model.dart';
 import '../utils/toast_message.dart';
+import '../utils/notification_class.dart';
 
 Future showMyDialogue(BuildContext context) {
   final titleController = TextEditingController();
@@ -121,6 +122,11 @@ Future showMyDialogue(BuildContext context) {
                         box.add(data);
                         Navigator.pop(context);
                         ToastMessage().message("Task added successfully");
+                        NotificationClass.showNotification(
+                          id: 1,
+                          title: "Task Added",
+                          body: "Your task '${titleController.text}' has been saved.",
+                        );
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.deepPurple,

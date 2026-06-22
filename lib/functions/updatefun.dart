@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../notes_model/notes_model.dart';
 import '../utils/toast_message.dart';
+import '../utils/notification_class.dart';
 
 Future updateMyDialogue(BuildContext context, NotesModel notesModel, String title, String description) {
   final titleController = TextEditingController(text: title);
@@ -90,7 +91,9 @@ Future updateMyDialogue(BuildContext context, NotesModel notesModel, String titl
                         },
                         selectedColor: Colors.deepPurple,
                         labelStyle: TextStyle(
-                          color: isSelected ? Colors.white : Colors.black,
+                          color: isSelected
+                              ? Colors.white
+                              : Theme.of(context).colorScheme.onSurface,
                         ),
                       );
                     }).toList(),
@@ -109,6 +112,11 @@ Future updateMyDialogue(BuildContext context, NotesModel notesModel, String titl
                           Navigator.pop(context);
                         }
                         ToastMessage().message("Update successfully");
+                        NotificationClass.showNotification(
+                          id: 2,
+                          title: "Task Updated",
+                          body: "The task '${notesModel.title}' has been updated.",
+                        );
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.deepPurple,

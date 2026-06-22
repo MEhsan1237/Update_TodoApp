@@ -7,11 +7,13 @@ import 'package:provider/provider.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'package:todo_app/provider/provider_class.dart';
+import 'package:todo_app/utils/notification_class.dart';
 import 'main_screen/home_navigation.dart';
 import 'notes_model/notes_model.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await NotificationClass.initialize();
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
       statusBarIconBrightness: Brightness.dark,
